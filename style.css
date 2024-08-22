@@ -68,6 +68,11 @@ body {
     align-items: stretch;
 }
 
+/* .search-control,
+.search-btn {
+    width: 80%;
+} */
+
 .search-control {
     padding: 0 1rem;
     font-size: 1rem;
@@ -93,11 +98,6 @@ body {
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
     transition: all 0.4s linear;
-}
-
-.search-btn i {
-    font-size: 1rem;
-    padding-bottom: 1rem;
 }
 
 .search-btn:hover {
@@ -145,7 +145,7 @@ body {
 
 .recipe-btn {
     text-decoration: none;
-    color: #fff;
+    color: white;
     background: var(--primary-color);
     font-weight: 500;
     padding: 0.75rem 0;
@@ -165,13 +165,12 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: white;
     background: var(--primary-color);
-    color: #fff;
     border-radius: 1rem;
     width: 90%;
     height: 90%;
     overflow-y: scroll;
-    overflow-x: hidden;
     display: none;
     padding: 2rem 0;
 }
@@ -185,16 +184,13 @@ body {
     border-radius: 2rem;
 }
 
+/* JS Related */
 .showRecipe {
     display: block;
 }
 
 .meal-details-content {
     margin: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .meal-details-content p:not(.recipe-category) {
@@ -228,7 +224,7 @@ body {
 }
 
 .recipe-category {
-    background: #fff;
+    background: white;
     font-weight: 600;
     color: var(--primary-color);
     display: inline-block;
@@ -246,28 +242,29 @@ body {
     border-radius: 50%;
     margin: 0 auto;
     display: block;
-    border: 2px solid #fff;
 }
 
 .recipe-link {
     margin: 1.4rem 0;
 }
+
 .recipe-link a {
-    color: #fff;
+    color: white;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 700;
     transition: all 0.4s linear;
-    text-decoration: none;
 }
 
 .notFound {
     grid-template-columns: 1fr !important;
     color: var(--primary-color);
+    font-size: 1.8rem;
     font-weight: 600;
     width: 100%;
 }
 
 /* Responsiveness */
+
 @media screen and (max-width: 600px) {
     #meal {
         display: flex;
@@ -282,6 +279,7 @@ body {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
+
     .meal-item {
         margin: 0;
     }
